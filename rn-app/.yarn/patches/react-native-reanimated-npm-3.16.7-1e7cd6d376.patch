@@ -1,0 +1,13 @@
+diff --git a/scripts/reanimated_utils.rb b/scripts/reanimated_utils.rb
+index 9fc7b15b617754cf698f9a973ea4666052bc8199..e4d74ce65836c2ee53bd130b3f48057a59831944 100644
+--- a/scripts/reanimated_utils.rb
++++ b/scripts/reanimated_utils.rb
+@@ -17,7 +17,7 @@ def find_config()
+     :react_native_reanimated_dir_from_pods_root => nil,
+   }
+ 
+-  react_native_node_modules_dir = File.join(File.dirname(`cd "#{Pod::Config.instance.installation_root.to_s}" && node --print "require.resolve('react-native/package.json')"`), '..')
++  react_native_node_modules_dir = File.join(File.dirname(`cd "#{Pod::Config.instance.installation_root.to_s}/rn-app" && node --print "require.resolve('react-native/package.json')"`), '..')
+   react_native_json = try_to_parse_react_native_package_json(react_native_node_modules_dir)
+ 
+   if react_native_json == nil
