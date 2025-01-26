@@ -1,5 +1,5 @@
 import {
-    Button,
+    Button, Dimensions,
     StyleSheet, Text,
     useColorScheme, View,
 } from 'react-native';
@@ -7,9 +7,16 @@ import {
 import {NavigationContainer, useNavigation} from "@react-navigation/native";
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {BottomSheetModal, BottomSheetModalProvider, BottomSheetView} from "@gorhom/bottom-sheet";
+import {
+    BottomSheetBackdrop,
+    BottomSheetModal,
+    BottomSheetModalProvider,
+    BottomSheetScrollView,
+    BottomSheetView
+} from "@gorhom/bottom-sheet";
 import {useCallback, useRef, useState} from "react";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
+import {FullWindowOverlay} from "react-native-screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +33,12 @@ const HomeScreen = () => {
                 <Text>Home Screen</Text>
                 <Button title={'Click'} onPress={handleClick}/>
             </View>
+            <FullWindowOverlay>
+                <View style={styles.overlay} pointerEvents="box-none">
+                    <View style={styles.box} />
+                    <Text>Overay</Text>
+                </View>
+            </FullWindowOverlay>
         </BottomSheetModalProvider>
     )
 }
@@ -58,16 +71,33 @@ const ProfileScreen = () => {
                 ref={bottomSheetModalRef}
                 enablePanDownToClose={true}
                 onDismiss={onDismiss}
+                maxDynamicContentSize={Dimensions.get('window').height * 0.9}
+                containerComponent={({children}) => (<FullWindowOverlay>{children}</FullWindowOverlay>)}
+                backdropComponent={(props) => <BottomSheetBackdrop
+                    {...props}
+                    pressBehavior="close"
+                    appearsOnIndex={0}
+                    disappearsOnIndex={-1}
+                />}
             >
-                <BottomSheetView>
+                <BottomSheetScrollView>
                     <Text>Awesome 🎉</Text>
                     <Text>Awesome 🎉</Text>
                     <Text>Awesome 🎉</Text>
                     <Text>Awesome 🎉</Text>
                     <Text>Awesome 🎉</Text>
                     <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                </BottomSheetView>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                    <Text>Awesome 🎉Awesome 🎉</Text>
+                </BottomSheetScrollView>
             </BottomSheetModal>
         </View>
         </BottomSheetModalProvider>
@@ -97,14 +127,27 @@ function App(): JSX.Element {
     );
 }
 
+export default App;
+
+
 const styles = StyleSheet.create({
-    title: {
-        fontSize: 24,
-        fontWeight: '600',
+    container: {
+        flex: 1,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
     },
-    bold: {
-        fontWeight: '700',
+    overlay: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: `rgba(0,0,0,0.5)`,
+    },
+    box: {
+        width: 40,
+        height: 40,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: 'black',
+        backgroundColor: 'red',
     },
 });
-
-export default App;
