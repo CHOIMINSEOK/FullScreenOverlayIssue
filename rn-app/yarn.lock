@@ -8102,7 +8102,7 @@ __metadata:
 
 "react-native-reanimated@patch:react-native-reanimated@npm%3A3.16.7#~/.yarn/patches/react-native-reanimated-npm-3.16.7-1e7cd6d376.patch":
   version: 3.16.7
-  resolution: "react-native-reanimated@patch:react-native-reanimated@npm%3A3.16.7#~/.yarn/patches/react-native-reanimated-npm-3.16.7-1e7cd6d376.patch::version=3.16.7&hash=4ae5b1"
+  resolution: "react-native-reanimated@patch:react-native-reanimated@npm%3A3.16.7#~/.yarn/patches/react-native-reanimated-npm-3.16.7-1e7cd6d376.patch::version=3.16.7&hash=0493e0"
   dependencies:
     "@babel/plugin-transform-arrow-functions": "npm:^7.0.0-0"
     "@babel/plugin-transform-class-properties": "npm:^7.0.0-0"
@@ -8119,7 +8119,7 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 10c0/37d40540d87494f8dbe6355ecc7b557725e11dcbc4ef237bd441d1a944315a0d1c438819d390100252ce578c5d53d70497eda682ce1889b26d6460323cb3482b
+  checksum: 10c0/bc8bb3d27358e92519b3b4238de64cc072eee35caf5e56ac8735a901d36063a4b2d40e01781f9146da32826de940c2622fba13128f3bb59166e4453d2b1d0665
   languageName: node
   linkType: hard
 

@@ -33,12 +33,12 @@ const HomeScreen = () => {
                 <Text>Home Screen</Text>
                 <Button title={'Click'} onPress={handleClick}/>
             </View>
-            <FullWindowOverlay>
-                <View style={styles.overlay} pointerEvents="box-none">
-                    <View style={styles.box} />
-                    <Text>Overay</Text>
-                </View>
-            </FullWindowOverlay>
+            {/*<FullWindowOverlay>*/}
+            {/*    <View style={styles.overlay} pointerEvents="box-none">*/}
+            {/*        <View style={styles.box} />*/}
+            {/*        <Text>Overay</Text>*/}
+            {/*    </View>*/}
+            {/*</FullWindowOverlay>*/}
         </BottomSheetModalProvider>
     )
 }
