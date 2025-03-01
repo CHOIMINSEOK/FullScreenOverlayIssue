@@ -57,10 +57,6 @@
     return RCTCoreModulesClassProvider(name);
 }
 
-- (id<RCTTurboModule>)getModuleInstanceFromClass:(Class)moduleClass {
-    return RCTAppSetupDefaultModuleFromClass(moduleClass);
-}
-
 @end
 
 

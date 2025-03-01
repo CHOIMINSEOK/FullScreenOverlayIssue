@@ -2,6 +2,8 @@
 #
 .DS_Store
 
+.kotlin/
+
 # Xcode
 #
 build/
@@ -66,7 +68,7 @@ yarn-error.log
 /coverage
 
 # Yarn
-.yarn/*
+rn-app/yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases

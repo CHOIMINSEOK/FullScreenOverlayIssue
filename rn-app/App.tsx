@@ -59,9 +59,12 @@ const ProfileScreen = () => {
     }, []);
 
     return (
-        <BottomSheetModalProvider>
 
-        <View>
+
+            <BottomSheetModalProvider>
+        <View style={{ flex: 1 }} onLayout={e => {
+            console.log(e.nativeEvent.layout.height)
+        }}>
             <Text>
                 ProfileStack
 
@@ -100,7 +103,8 @@ const ProfileScreen = () => {
                 </BottomSheetScrollView>
             </BottomSheetModal>
         </View>
-        </BottomSheetModalProvider>
+            </BottomSheetModalProvider>
+
 
     )
 }

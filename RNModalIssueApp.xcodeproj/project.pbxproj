@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2CA2C0A9434F3A21A96FC9 /* Pods_RNModalIssueApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693EE830B7287CB329467688 /* Pods_RNModalIssueApp.framework */; };
+		0C6CBE8A602523F29A1817C1 /* Pods_RNModalIssueApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAA6BC91AC434DC7072210B /* Pods_RNModalIssueApp.framework */; };
 		135B1808E7F14616DB96C9FF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 851AF973A9D45E2263108B99 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		693EE830B7287CB329467688 /* Pods_RNModalIssueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNModalIssueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DAA6BC91AC434DC7072210B /* Pods_RNModalIssueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNModalIssueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851AF973A9D45E2263108B99 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		B40EDCF863EB83C929B14C47 /* Pods-RNModalIssueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNModalIssueApp.debug.xcconfig"; path = "Target Support Files/Pods-RNModalIssueApp/Pods-RNModalIssueApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DFAD3632E2D2D92323EA7DCC /* Pods-RNModalIssueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNModalIssueApp.release.xcconfig"; path = "Target Support Files/Pods-RNModalIssueApp/Pods-RNModalIssueApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2CA2C0A9434F3A21A96FC9 /* Pods_RNModalIssueApp.framework in Frameworks */,
+				0C6CBE8A602523F29A1817C1 /* Pods_RNModalIssueApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 		B35C051527F06C67091B986C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				693EE830B7287CB329467688 /* Pods_RNModalIssueApp.framework */,
+				0DAA6BC91AC434DC7072210B /* Pods_RNModalIssueApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

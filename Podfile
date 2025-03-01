@@ -27,16 +27,16 @@ target 'RNModalIssueApp' do
       # An absolute path to your application root.
       :app_path => "#{Pod::Config.instance.installation_root}/rn-app"
     )
-  
+
     post_install do |installer|
       # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
       react_native_post_install(
         installer,
-        config[:reactNativePath],
+        "rn-app/node_modules/react-native",
         :mac_catalyst_enabled => false,
         # :ccache_enabled => true
       )
-      
+
       installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = 15.0
