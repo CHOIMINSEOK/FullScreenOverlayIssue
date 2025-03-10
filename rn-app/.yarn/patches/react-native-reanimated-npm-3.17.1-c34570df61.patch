@@ -1,18 +1,5 @@
-diff --git a/RNReanimated.podspec b/RNReanimated.podspec
-index dbc740333617894ed0649d10214b4f0a28af0910..0992170482bc56dfbe7b31268aad5a937392ed53 100644
---- a/RNReanimated.podspec
-+++ b/RNReanimated.podspec
-@@ -133,6 +133,8 @@ Pod::Spec.new do |s|
-   s.dependency "ReactCommon/turbomodule/core"
-   if defined?(install_modules_dependencies()) != nil
-     install_modules_dependencies(s)
-+    s.dependency 'React-jsi'
-+    s.dependency 'React-hermes'
-   else
-     install_modules_dependencies_legacy(s)
-   end
 diff --git a/scripts/reanimated_utils.rb b/scripts/reanimated_utils.rb
-index 9fc7b15b617754cf698f9a973ea4666052bc8199..e4d74ce65836c2ee53bd130b3f48057a59831944 100644
+index ec240a0c099383c6b421a341364b6b4d628cab85..8260066ea3b32ea2ba8dc63345047fff2c580d42 100644
 --- a/scripts/reanimated_utils.rb
 +++ b/scripts/reanimated_utils.rb
 @@ -17,7 +17,7 @@ def find_config()
