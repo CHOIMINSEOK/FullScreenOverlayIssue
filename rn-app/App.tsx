@@ -116,7 +116,7 @@ function App(): JSX.Element {
                     headerShown: false,
                 }}>
                     <Stack.Screen name="Home" component={HomeScreen} />
-                    <Stack.Screen name="NonModalPage" component={NonModalPage} options={{ presentation: 'card' }}  />
+                    <Stack.Screen name="NonModalPage" component={NonModalPage} />
                     <Stack.Group screenOptions={{
                         presentation: 'modal'
                     }}>
