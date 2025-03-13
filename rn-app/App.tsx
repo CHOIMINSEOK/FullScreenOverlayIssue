@@ -12,11 +12,11 @@ import {
     BottomSheetModal,
     BottomSheetModalProvider,
     BottomSheetScrollView,
-    BottomSheetView
 } from "@gorhom/bottom-sheet";
 import {useCallback, useRef, useState} from "react";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 import {FullWindowOverlay} from "react-native-screens";
+import {SampleBottomSheetModal} from "./SampleBottomSheetModal";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,18 +27,26 @@ const HomeScreen = () => {
         navigation.navigate('Profile')
     }
 
+    // ref
+    const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+
+    // callbacks
+    const handlePresentModalPress = useCallback(() => {
+        bottomSheetModalRef.current?.present();
+    }, []);
+
+    const onDismiss  = useCallback(() => {
+        bottomSheetModalRef.current?.dismiss();
+    }, []);
+
     return (
         <BottomSheetModalProvider>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Home Screen</Text>
                 <Button title={'Click'} onPress={handleClick}/>
+                <Button title={'BottomSheet Click'} onPress={handlePresentModalPress}/>
+                <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
             </View>
-            {/*<FullWindowOverlay>*/}
-            {/*    <View style={styles.overlay} pointerEvents="box-none">*/}
-            {/*        <View style={styles.box} />*/}
-            {/*        <Text>Overay</Text>*/}
-            {/*    </View>*/}
-            {/*</FullWindowOverlay>*/}
         </BottomSheetModalProvider>
     )
 }
@@ -70,38 +78,7 @@ const ProfileScreen = () => {
 
             </Text>
             <Button title={'Click'} onPress={handlePresentModalPress}/>
-            <BottomSheetModal
-                ref={bottomSheetModalRef}
-                enablePanDownToClose={true}
-                onDismiss={onDismiss}
-                maxDynamicContentSize={Dimensions.get('window').height * 0.9}
-                containerComponent={({children}) => (<FullWindowOverlay>{children}</FullWindowOverlay>)}
-                backdropComponent={(props) => <BottomSheetBackdrop
-                    {...props}
-                    pressBehavior="close"
-                    appearsOnIndex={0}
-                    disappearsOnIndex={-1}
-                />}
-            >
-                <BottomSheetScrollView>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                    <Text>Awesome 🎉Awesome 🎉</Text>
-                </BottomSheetScrollView>
-            </BottomSheetModal>
+            <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
         </View>
             </BottomSheetModalProvider>
 
