@@ -1,7 +1,7 @@
 import {BottomSheetBackdrop, BottomSheetModal, BottomSheetScrollView} from "@gorhom/bottom-sheet";
-import {Dimensions, Text} from "react-native";
-import {FullWindowOverlay} from "react-native-screens";
+import {Button, Dimensions, Text} from "react-native";
 import {RefObject} from "react";
+import {useNavigation} from "@react-navigation/native";
 
 export const SampleBottomSheetModal = ({
     ref, onDismiss
@@ -9,12 +9,13 @@ export const SampleBottomSheetModal = ({
     ref: RefObject<BottomSheetModal>,
     onDismiss: () => void,
 }) => {
+    const navigation = useNavigation();
+
     return ( <BottomSheetModal
         ref={ref}
         enablePanDownToClose={true}
         onDismiss={onDismiss}
         maxDynamicContentSize={Dimensions.get('window').height * 0.9}
-        containerComponent={({children}) => (<FullWindowOverlay>{children}</FullWindowOverlay>)}
         backdropComponent={(props) => <BottomSheetBackdrop
             {...props}
             pressBehavior="close"
@@ -23,6 +24,7 @@ export const SampleBottomSheetModal = ({
         />}
     >
         <BottomSheetScrollView>
+            <Button title={'Go to NonModalPage'} onPress={() => navigation.navigate('NonModalPage')}/>
             <Text>Awesome 🎉</Text>
             <Text>Awesome 🎉</Text>
             <Text>Awesome 🎉</Text>
