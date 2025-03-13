@@ -40,14 +40,12 @@ const HomeScreen = () => {
     }, []);
 
     return (
-        <BottomSheetModalProvider>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Home Screen</Text>
-                <Button title={'Click'} onPress={handleClick}/>
-                <Button title={'BottomSheet Click'} onPress={handlePresentModalPress}/>
-                <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
-            </View>
-        </BottomSheetModalProvider>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <Text>Home Screen</Text>
+            <Button title={'Click'} onPress={handleClick}/>
+            <Button title={'BottomSheet Click'} onPress={handlePresentModalPress}/>
+            <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss}/>
+        </View>
     )
 }
 
@@ -67,10 +65,7 @@ const ProfileScreen = () => {
     }, []);
 
     return (
-
-
-            <BottomSheetModalProvider>
-        <View style={{ flex: 1 }} onLayout={e => {
+        <View style={{flex: 1}} onLayout={e => {
             console.log(e.nativeEvent.layout.height)
         }}>
             <Text>
@@ -80,9 +75,6 @@ const ProfileScreen = () => {
             <Button title={'Click'} onPress={handlePresentModalPress}/>
             <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
         </View>
-            </BottomSheetModalProvider>
-
-
     )
 }
 
@@ -93,16 +85,18 @@ function App(): JSX.Element {
     return (
         <GestureHandlerRootView>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Home" screenOptions={{
-                    headerShown: false,
-                }}>
-                    <Stack.Screen name="Home" component={HomeScreen} />
-                    <Stack.Group screenOptions={{
-                        presentation: 'modal'
+                <BottomSheetModalProvider>
+                    <Stack.Navigator initialRouteName="Home" screenOptions={{
+                        headerShown: false,
                     }}>
-                        <Stack.Screen name="Profile" component={ProfileScreen} />
-                    </Stack.Group>
-                </Stack.Navigator>
+                        <Stack.Screen name="Home" component={HomeScreen}/>
+                        <Stack.Group screenOptions={{
+                            presentation: 'modal'
+                        }}>
+                            <Stack.Screen name="Profile" component={ProfileScreen}/>
+                        </Stack.Group>
+                    </Stack.Navigator>
+                </BottomSheetModalProvider>
             </NavigationContainer>
         </GestureHandlerRootView>
     );
