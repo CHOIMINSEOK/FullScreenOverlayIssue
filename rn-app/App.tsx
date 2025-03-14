@@ -52,17 +52,19 @@ const HomeScreen = () => {
 }
 
 const ProfileScreen = () => {
-    const [showModal, setShowModal] = useState<boolean>(false);
+    const navigation = useNavigation();
 
     // ref
     const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
     // callbacks
     const handlePresentModalPress = useCallback(() => {
+        navigation.getParent().setOptions({gestureEnabled: false});
         bottomSheetModalRef.current?.present();
     }, []);
 
     const onDismiss  = useCallback(() => {
+        navigation.getParent().setOptions({gestureEnabled: true});
         bottomSheetModalRef.current?.dismiss();
     }, []);
 
