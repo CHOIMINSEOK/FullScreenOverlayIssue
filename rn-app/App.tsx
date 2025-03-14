@@ -52,17 +52,19 @@ const HomeScreen = () => {
 }
 
 const ProfileScreen = () => {
-    const [showModal, setShowModal] = useState<boolean>(false);
+    const navigation = useNavigation();
 
     // ref
     const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
     // callbacks
     const handlePresentModalPress = useCallback(() => {
+        navigation.getParent().setOptions({gestureEnabled: false});
         bottomSheetModalRef.current?.present();
     }, []);
 
     const onDismiss  = useCallback(() => {
+        navigation.getParent().setOptions({gestureEnabled: true});
         bottomSheetModalRef.current?.dismiss();
     }, []);
 
@@ -86,9 +88,28 @@ const ProfileScreen = () => {
     )
 }
 
+const NonModalPage = () => {
+    const navigation = useNavigation();
+
+    return (
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <Text>NonModalPage</Text>
+            <Button title={'Back'} onPress={() => navigation.goBack()}/>
+        </View>
+    );
+}
+
 function App(): JSX.Element {
     const isDarkMode = useColorScheme() === 'dark';
 
+    const ProfileStack = () => {
+        return (
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+                <Stack.Screen name="NonModalPage" component={NonModalPage} />
+            </Stack.Navigator>
+        );
+    };
 
     return (
         <GestureHandlerRootView>
@@ -97,10 +118,11 @@ function App(): JSX.Element {
                     headerShown: false,
                 }}>
                     <Stack.Screen name="Home" component={HomeScreen} />
+                    <Stack.Screen name="NonModalPage" component={NonModalPage} />
                     <Stack.Group screenOptions={{
                         presentation: 'modal'
                     }}>
-                        <Stack.Screen name="Profile" component={ProfileScreen} />
+                        <Stack.Screen name="Profile" component={ProfileStack} />
                     </Stack.Group>
                 </Stack.Navigator>
             </NavigationContainer>
