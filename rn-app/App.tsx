@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     Button, Dimensions,
     StyleSheet, Text,
@@ -15,80 +16,32 @@ import {
 } from "@gorhom/bottom-sheet";
 import {useCallback, useRef, useState} from "react";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
-import {FullWindowOverlay} from "react-native-screens";
-import {SampleBottomSheetModal} from "./SampleBottomSheetModal";
+import { SampleGridBottomSheet } from './sample-grid/sample-grid-bottom-sheet';
+import { GridItemType } from './sample-grid/grid-model';
 
 const Stack = createNativeStackNavigator();
 
 const HomeScreen = () => {
-    const navigation = useNavigation();
 
-    const handleClick = () => {
-        navigation.navigate('Profile')
-    }
-
-    // ref
-    const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-
-    // callbacks
-    const handlePresentModalPress = useCallback(() => {
-        bottomSheetModalRef.current?.present();
-    }, []);
-
-    const onDismiss  = useCallback(() => {
-        bottomSheetModalRef.current?.dismiss();
-    }, []);
+    const [selectedType, setSelectedType] = useState<GridItemType | null>(null);
 
     return (
         <BottomSheetModalProvider>
+            <Text>Home Screen</Text>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Home Screen</Text>
-                <Button title={'Click'} onPress={handleClick}/>
-                <Button title={'BottomSheet Click'} onPress={handlePresentModalPress}/>
-                <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
+                <Button title={'Click A'} onPress={() => setSelectedType('A')}/>
+                <Button title={'Click B'} onPress={() => setSelectedType('B')}/>
+                <Button title={'Click C'} onPress={() => setSelectedType('C')}/>
+                {selectedType && <SampleGridBottomSheet initialType={selectedType} onDismiss={() => setSelectedType(null)} />}
             </View>
         </BottomSheetModalProvider>
     )
 }
 
-const ProfileScreen = () => {
-    const [showModal, setShowModal] = useState<boolean>(false);
 
-    // ref
-    const bottomSheetModalRef = useRef<BottomSheetModal>(null);
-
-    // callbacks
-    const handlePresentModalPress = useCallback(() => {
-        bottomSheetModalRef.current?.present();
-    }, []);
-
-    const onDismiss  = useCallback(() => {
-        bottomSheetModalRef.current?.dismiss();
-    }, []);
-
-    return (
-
-
-            <BottomSheetModalProvider>
-        <View style={{ flex: 1 }} onLayout={e => {
-            console.log(e.nativeEvent.layout.height)
-        }}>
-            <Text>
-                ProfileStack
-
-            </Text>
-            <Button title={'Click'} onPress={handlePresentModalPress}/>
-            <SampleBottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} />
-        </View>
-            </BottomSheetModalProvider>
-
-
-    )
-}
-
-function App(): JSX.Element {
+function App(): React.ReactElement {
     const isDarkMode = useColorScheme() === 'dark';
-
 
     return (
         <GestureHandlerRootView>
@@ -97,11 +50,6 @@ function App(): JSX.Element {
                     headerShown: false,
                 }}>
                     <Stack.Screen name="Home" component={HomeScreen} />
-                    <Stack.Group screenOptions={{
-                        presentation: 'modal'
-                    }}>
-                        <Stack.Screen name="Profile" component={ProfileScreen} />
-                    </Stack.Group>
                 </Stack.Navigator>
             </NavigationContainer>
         </GestureHandlerRootView>
