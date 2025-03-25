@@ -26,7 +26,7 @@ export const SampleGrid = ({
    * 마운트 시 선택된 카테고리가 어느 위치에 있는지 찾기 위한 useEffect이고 선택된_카테고리가 변경되었을 때에만 동작하길 기대합니다.
    */
   useEffect(() => {
-    const hasParentCategory = selectedCategory?.parentId !== undefined;
+    const hasParentCategory = selectedCategory?.parent !== undefined;
 
     if (hasParentCategory) {
       setSelectedParentCategory(selectedCategory.parent!!);
@@ -66,7 +66,9 @@ export const SampleGrid = ({
 
   return (
     <View style={styles.container}>
-      {gridParentCategories.map((categoryList, row) => (
+      {gridParentCategories.map((categoryList, row) => {
+
+        return (
         <Fragment key={`category-row-${row}`}>
           <View style={styles.row}>
             {categoryList.map((category, col) => {
@@ -121,7 +123,8 @@ export const SampleGrid = ({
               </View>
             )}
         </Fragment>
-      ))}
+      )
+      })}
       <View style={styles.bottomSpace} />
     </View>
   );
@@ -155,9 +158,7 @@ const ParentCategoryItem = ({
       onPress={() => onPress(category, rowPosition)}
     >
       <View style={[styles.borderContainer, containerBorderStyle]} />
-      <View style={styles.spacing} />
-      <Image style={styles.categoryImage} source={{ uri: category.imageUrl }} />
-      <View style={styles.spacing} />
+      {/* <Image style={styles.categoryImage} source={{ uri: category.imageUrl }} /> */}
       <Text
         style={[
           styles.categoryText,
@@ -167,7 +168,6 @@ const ParentCategoryItem = ({
       >
         {category.name}
       </Text>
-      <View style={styles.spacing} />
     </Pressable>
   );
 };
@@ -250,6 +250,7 @@ const styles = StyleSheet.create({
     height: 80,
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 16,
   },
   borderContainer: {

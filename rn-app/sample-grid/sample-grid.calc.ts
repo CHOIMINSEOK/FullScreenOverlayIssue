@@ -8,11 +8,11 @@ export function convertCategoryListToGrid(
     ...categoryList,
     'CATEGORY_MANAGEMENT',
   ];
+    
   const result: (GridItem | 'CATEGORY_MANAGEMENT' | 'EMPTY')[][] = [];
 
   for (let i = 0; i < listWithCategoryManagement.length; i += maxRowItems) {
     const rows = listWithCategoryManagement.slice(i, i + maxRowItems);
-
     if (rows.length < maxRowItems) {
       const paddings: (GridItem | 'CATEGORY_MANAGEMENT' | 'EMPTY')[] = Array(
         maxRowItems - rows.length

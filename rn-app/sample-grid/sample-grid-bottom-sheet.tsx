@@ -7,6 +7,7 @@ import { HorizontalViewPager } from "./horizontal-view-pager";
 import { mockGridItems } from "./mock-data";
 import { SampleGrid } from "./sample-grid";
 import { BottomSheetDefaultBackdropProps } from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheetBackdrop/types";
+import { groupBy, pipe } from 'remeda';
 
 
 const GridItemTabTypes = [
@@ -34,6 +35,11 @@ export const SampleGridBottomSheet: FC<PropsWithChildren<{initialType: GridItemT
 
     const [selectedCategory, setSelectedCategory] = useState<GridItem | null>(null);
 
+    const gridItemMap = pipe(
+        mockGridItems,
+        groupBy(item => item.type)
+    );
+
     const handleOnSegmentedControlIndexChanged = (index: number) => {
       isHorizontalViewPagerDragging.current = false;
       horizontalViewPagerRef.current?.scrollToIndex({
@@ -57,11 +63,11 @@ export const SampleGridBottomSheet: FC<PropsWithChildren<{initialType: GridItemT
         <BottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} backdropComponent={Backdrop}>
           <BottomSheetView style={{ height: 600, width: '100%'}}>
               <SegmentedControl
-              ref={segmentedControlRef}
-              // @ts-ignore
-              tabs={GridItemTabTypes}
-              onTabChanged={handleOnSegmentedControlIndexChanged}
-              initialScrollIndex={initialScrollIndex}
+                ref={segmentedControlRef}
+                // @ts-ignore
+                tabs={GridItemTabTypes}
+                onTabChanged={handleOnSegmentedControlIndexChanged}
+                initialScrollIndex={initialScrollIndex}
               />
               <HorizontalViewPager
                   ref={horizontalViewPagerRef}
@@ -70,15 +76,15 @@ export const SampleGridBottomSheet: FC<PropsWithChildren<{initialType: GridItemT
                   }}
                   data={GridItemTabTypes}
                   initialScrollIndex={initialScrollIndex}
-                  renderItem={item => {
+                  renderItem={({item}) => {
                       return (
                       <ScrollView showsVerticalScrollIndicator={false} style={{height: 600, width: '100%'}}>
-                              <SampleGrid
-                              type={item.item}
-                              allCategories={mockGridItems}
-                              selectedCategory={selectedCategory}
-                              onCategoryClick={setSelectedCategory}
-                              /> 
+                        <SampleGrid
+                          type={item}
+                          allCategories={gridItemMap[item] ?? []}
+                          selectedCategory={selectedCategory}
+                          onCategoryClick={setSelectedCategory}
+                        /> 
                       </ScrollView>
                       );
                   }}
