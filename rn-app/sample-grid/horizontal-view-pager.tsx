@@ -15,6 +15,7 @@ import React, {
     ViewToken,
   } from 'react-native';
   import ReAnimated from 'react-native-reanimated';
+import { isEmpty, isNonNullish } from 'remeda';
   
   export type HorizontalViewPagerProps<T> = {
     onIndexChanged?: (offset: number) => void;
@@ -53,6 +54,15 @@ import React, {
         }, 100);
       }
     };
+
+    const handleViewableItemsChanged = useCallback(
+      ({ viewableItems }: { viewableItems: ViewToken<T>[] }) => {
+        if (onIndexChanged && !isEmpty(viewableItems) && isNonNullish(viewableItems[0].index)) {
+          onIndexChanged(viewableItems[0].index as number);
+        }
+      },
+      [onIndexChanged]
+    );
   
     return (
       <ReAnimated.FlatList
@@ -84,6 +94,7 @@ import React, {
           minIndexForVisible: 0,
           autoscrollToTopThreshold: 10,
         }}
+        onViewableItemsChanged={handleViewableItemsChanged}
         initialNumToRender={initialNumToRender}
         initialScrollIndex={initialScrollIndex}
         onScrollToIndexFailed={onScrollToIndexFailed}
