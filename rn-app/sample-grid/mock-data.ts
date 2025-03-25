@@ -5,7 +5,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A1",
-    name: "여성패션",
+    name: "Women's Fashion",
     imageUrl: "https://example.com/women-fashion.jpg",
     children: [],
     parent: undefined
@@ -13,7 +13,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A2",
-    name: "남성패션",
+    name: "Men's Fashion",
     imageUrl: "https://example.com/men-fashion.jpg",
     children: [],
     parent: undefined
@@ -21,7 +21,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A3",
-    name: "키즈패션",
+    name: "Kids Fashion",
     imageUrl: "https://example.com/kids-fashion.jpg",
     children: [],
     parent: undefined
@@ -29,7 +29,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A4",
-    name: "스포츠웨어",
+    name: "Sportswear",
     imageUrl: "https://example.com/sports-wear.jpg",
     children: [],
     parent: undefined
@@ -37,7 +37,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A5",
-    name: "액세서리",
+    name: "Accessories",
     imageUrl: "https://example.com/accessories.jpg",
     children: [],
     parent: undefined
@@ -45,7 +45,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A6",
-    name: "신발",
+    name: "Shoes",
     imageUrl: "https://example.com/shoes.jpg",
     children: [],
     parent: undefined
@@ -53,7 +53,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A7",
-    name: "가방",
+    name: "Bags",
     imageUrl: "https://example.com/bags.jpg",
     children: [],
     parent: undefined
@@ -61,7 +61,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A8",
-    name: "쥬얼리",
+    name: "Jewelry",
     imageUrl: "https://example.com/jewelry.jpg",
     children: [],
     parent: undefined
@@ -69,7 +69,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A9",
-    name: "시계",
+    name: "Watches",
     imageUrl: "https://example.com/watches.jpg",
     children: [],
     parent: undefined
@@ -77,7 +77,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A10",
-    name: "언더웨어",
+    name: "Underwear",
     imageUrl: "https://example.com/underwear.jpg",
     children: [],
     parent: undefined
@@ -85,7 +85,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A11",
-    name: "아웃도어",
+    name: "Outdoor",
     imageUrl: "https://example.com/outdoor.jpg",
     children: [],
     parent: undefined
@@ -93,7 +93,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A12",
-    name: "수영복",
+    name: "Swimwear",
     imageUrl: "https://example.com/swimwear.jpg",
     children: [],
     parent: undefined
@@ -101,7 +101,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A13",
-    name: "홈웨어",
+    name: "Homewear",
     imageUrl: "https://example.com/homewear.jpg",
     children: [],
     parent: undefined
@@ -109,7 +109,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A14",
-    name: "트렌디",
+    name: "Trendy",
     imageUrl: "https://example.com/trendy.jpg",
     children: [],
     parent: undefined
@@ -117,7 +117,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A15",
-    name: "빈티지",
+    name: "Vintage",
     imageUrl: "https://example.com/vintage.jpg",
     children: [],
     parent: undefined
@@ -125,31 +125,31 @@ export const mockGridItems: GridItem[] = [
   {
     type: "A",
     id: "A16",
-    name: "유니폼",
+    name: "Uniform",
     imageUrl: "https://example.com/uniform.jpg",
     children: [],
     parent: undefined
   },
 
-  // Type B Items with children
+  // Type B Items
   {
     type: "B",
     id: "B1",
-    name: "스마트폰",
+    name: "Smartphones",
     imageUrl: "https://example.com/smartphones.jpg",
     children: [
       {
         type: "B",
         id: "B1-1",
-        name: "아이폰",
+        name: "iPhone",
         imageUrl: "https://example.com/iphone.jpg",
         children: [],
-        parent: undefined // 실제 사용시 부모 참조 필요
+        parent: undefined
       },
       {
         type: "B",
         id: "B1-2",
-        name: "갤럭시",
+        name: "Galaxy",
         imageUrl: "https://example.com/galaxy.jpg",
         children: [],
         parent: undefined
@@ -157,7 +157,7 @@ export const mockGridItems: GridItem[] = [
       {
         type: "B",
         id: "B1-3",
-        name: "픽셀",
+        name: "Pixel",
         imageUrl: "https://example.com/pixel.jpg",
         children: [],
         parent: undefined
@@ -165,7 +165,7 @@ export const mockGridItems: GridItem[] = [
       {
         type: "B",
         id: "B1-4",
-        name: "샤오미",
+        name: "Xiaomi",
         imageUrl: "https://example.com/xiaomi.jpg",
         children: [],
         parent: undefined
@@ -173,7 +173,7 @@ export const mockGridItems: GridItem[] = [
       {
         type: "B",
         id: "B1-5",
-        name: "원플러스",
+        name: "OnePlus",
         imageUrl: "https://example.com/oneplus.jpg",
         children: [],
         parent: undefined
@@ -181,52 +181,86 @@ export const mockGridItems: GridItem[] = [
     ],
     parent: undefined
   },
-  // 나머지 Type B 아이템들
   {
     type: "B",
     id: "B2",
-    name: "노트북",
+    name: "Laptops",
     imageUrl: "https://example.com/laptops.jpg",
     children: [
       {
         type: "B",
         id: "B2-1",
-        name: "맥북",
+        name: "MacBook",
         imageUrl: "https://example.com/macbook.jpg",
         children: [],
-        parent: "B2"
+        parent: {
+          type: "B",
+          id: "B2",
+          name: "Laptops",
+          imageUrl: "https://example.com/laptops.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B2-2",
-        name: "그램",
+        name: "LG Gram",
         imageUrl: "https://example.com/gram.jpg",
         children: [],
-        parent: "B2"
+        parent: {
+          type: "B",
+          id: "B2",
+          name: "Laptops",
+          imageUrl: "https://example.com/laptops.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B2-3",
-        name: "갤럭시북",
+        name: "Galaxy Book",
         imageUrl: "https://example.com/galaxybook.jpg",
         children: [],
-        parent: "B2"
+        parent: {
+          type: "B",
+          id: "B2",
+          name: "Laptops",
+          imageUrl: "https://example.com/laptops.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B2-4",
-        name: "레노버",
+        name: "Lenovo",
         imageUrl: "https://example.com/lenovo.jpg",
         children: [],
-        parent: "B2"
+        parent: {
+          type: "B",
+          id: "B2",
+          name: "Laptops",
+          imageUrl: "https://example.com/laptops.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B2-5",
-        name: "델",
+        name: "Dell",
         imageUrl: "https://example.com/dell.jpg",
         children: [],
-        parent: "B2"
+        parent: {
+          type: "B",
+    id: "B2",
+    name: "Laptops",
+    imageUrl: "https://example.com/laptops.jpg",
+    parent: undefined,
+    children: []
+        }
       }
     ],
     parent: undefined
@@ -234,48 +268,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B3",
-    name: "태블릿",
+    name: "Tablets",
     imageUrl: "https://example.com/tablets.jpg",
     children: [
       {
         type: "B",
         id: "B3-1",
-        name: "아이패드",
+        name: "iPad",
         imageUrl: "https://example.com/ipad.jpg",
         children: [],
-        parent: "B3"
+        parent: {
+          type: "B",
+          id: "B3",
+          name: "Tablets",
+          imageUrl: "https://example.com/tablets.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B3-2",
-        name: "갤럭시탭",
+        name: "Galaxy Tab",
         imageUrl: "https://example.com/galaxytab.jpg",
         children: [],
-        parent: "B3"
+        parent: {
+          type: "B",
+          id: "B3",
+          name: "Tablets",
+          imageUrl: "https://example.com/tablets.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B3-3",
-        name: "서피스",
+        name: "Surface",
         imageUrl: "https://example.com/surface.jpg",
         children: [],
-        parent: "B3"
+        parent: {
+          type: "B",
+          id: "B3",
+          name: "Tablets",
+          imageUrl: "https://example.com/tablets.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B3-4",
-        name: "화웨이",
+        name: "Huawei",
         imageUrl: "https://example.com/huawei-tablet.jpg",
         children: [],
-        parent: "B3"
+        parent: {
+          type: "B",
+          id: "B3",
+          name: "Tablets",
+          imageUrl: "https://example.com/tablets.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B3-5",
-        name: "레노버탭",
+        name: "Lenovo Tab",
         imageUrl: "https://example.com/lenovo-tablet.jpg",
         children: [],
-        parent: "B3"
+        parent: {
+          type: "B",
+          id: "B3",
+          name: "Tablets",
+          imageUrl: "https://example.com/tablets.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -283,48 +352,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B4",
-    name: "스마트워치",
+    name: "Smartwatches",
     imageUrl: "https://example.com/smartwatches.jpg",
     children: [
       {
         type: "B",
         id: "B4-1",
-        name: "애플워치",
+        name: "Apple Watch",
         imageUrl: "https://example.com/applewatch.jpg",
         children: [],
-        parent: "B4"
+        parent: {
+          type: "B",
+          id: "B4",
+          name: "Smartwatches",
+          imageUrl: "https://example.com/smartwatches.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B4-2",
-        name: "갤럭시워치",
+        name: "Galaxy Watch",
         imageUrl: "https://example.com/galaxywatch.jpg",
         children: [],
-        parent: "B4"
+        parent: {
+          type: "B",
+          id: "B4",
+          name: "Smartwatches",
+          imageUrl: "https://example.com/smartwatches.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B4-3",
-        name: "가민",
+        name: "Garmin",
         imageUrl: "https://example.com/garmin.jpg",
         children: [],
-        parent: "B4"
+        parent: {
+          type: "B",
+          id: "B4",
+          name: "Smartwatches",
+          imageUrl: "https://example.com/smartwatches.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B4-4",
-        name: "핏빗",
+        name: "Fitbit",
         imageUrl: "https://example.com/fitbit.jpg",
         children: [],
-        parent: "B4"
+        parent: {
+          type: "B",
+          id: "B4",
+          name: "Smartwatches",
+          imageUrl: "https://example.com/smartwatches.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B4-5",
-        name: "샤오미밴드",
+        name: "Mi Band",
         imageUrl: "https://example.com/miband.jpg",
         children: [],
-        parent: "B4"
+        parent: {
+          type: "B",
+          id: "B4",
+          name: "Smartwatches",
+          imageUrl: "https://example.com/smartwatches.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -332,48 +436,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B5",
-    name: "이어폰/헤드폰",
+    name: "Earphones/Headphones",
     imageUrl: "https://example.com/headphones.jpg",
     children: [
       {
         type: "B",
         id: "B5-1",
-        name: "에어팟",
+        name: "AirPods",
         imageUrl: "https://example.com/airpods.jpg",
         children: [],
-        parent: "B5"
+        parent: {
+          type: "B",
+          id: "B5",
+          name: "Earphones/Headphones",
+          imageUrl: "https://example.com/headphones.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B5-2",
-        name: "갤럭시버즈",
+        name: "Galaxy Buds",
         imageUrl: "https://example.com/galaxybuds.jpg",
         children: [],
-        parent: "B5"
+        parent: {
+          type: "B",
+          id: "B5",
+          name: "Earphones/Headphones",
+          imageUrl: "https://example.com/headphones.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B5-3",
-        name: "소니",
+        name: "Sony",
         imageUrl: "https://example.com/sony-headphones.jpg",
         children: [],
-        parent: "B5"
+        parent: {
+          type: "B",
+          id: "B5",
+          name: "Earphones/Headphones",
+          imageUrl: "https://example.com/headphones.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B5-4",
-        name: "보스",
+        name: "Bose",
         imageUrl: "https://example.com/bose.jpg",
         children: [],
-        parent: "B5"
+        parent: {
+          type: "B",
+          id: "B5",
+          name: "Earphones/Headphones",
+          imageUrl: "https://example.com/headphones.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B5-5",
-        name: "젠하이저",
+        name: "Sennheiser",
         imageUrl: "https://example.com/sennheiser.jpg",
         children: [],
-        parent: "B5"
+          parent: {
+          type: "B",
+          id: "B5",
+          name: "Earphones/Headphones",
+          imageUrl: "https://example.com/headphones.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -381,16 +520,23 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B6",
-    name: "스피커",
+    name: "Speakers",
     imageUrl: "https://example.com/speakers.jpg",
     children: [
       {
         type: "B",
         id: "B6-1",
-        name: "홈팟",
+        name: "HomePod",
         imageUrl: "https://example.com/homepod.jpg",
         children: [],
-        parent: "B6"
+        parent: {
+          type: "B",
+          id: "B6",
+          name: "Speakers",
+          imageUrl: "https://example.com/speakers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
@@ -398,31 +544,59 @@ export const mockGridItems: GridItem[] = [
         name: "JBL",
         imageUrl: "https://example.com/jbl.jpg",
         children: [],
-        parent: "B6"
+        parent: {
+          type: "B",
+          id: "B6",
+          name: "Speakers",
+          imageUrl: "https://example.com/speakers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B6-3",
-        name: "마샬",
+        name: "Marshall",
         imageUrl: "https://example.com/marshall.jpg",
         children: [],
-        parent: "B6"
+        parent: {
+          type: "B",
+          id: "B6",
+          name: "Speakers",
+          imageUrl: "https://example.com/speakers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B6-4",
-        name: "보스",
+        name: "Bose",
         imageUrl: "https://example.com/bose-speaker.jpg",
         children: [],
-        parent: "B6"
+        parent: {
+          type: "B",
+          id: "B6",
+          name: "Speakers",
+          imageUrl: "https://example.com/speakers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B6-5",
-        name: "소노스",
+        name: "Sonos",
         imageUrl: "https://example.com/sonos.jpg",
         children: [],
-        parent: "B6"
+        parent: {
+          type: "B",
+          id: "B6",
+          name: "Speakers",
+          imageUrl: "https://example.com/speakers.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -430,48 +604,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B7",
-    name: "카메라",
+    name: "Cameras",
     imageUrl: "https://example.com/cameras.jpg",
     children: [
       {
         type: "B",
         id: "B7-1",
-        name: "캐논",
+        name: "Canon",
         imageUrl: "https://example.com/canon.jpg",
         children: [],
-        parent: "B7"
+        parent: {
+          type: "B",
+          id: "B7",
+          name: "Cameras",
+          imageUrl: "https://example.com/cameras.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B7-2",
-        name: "니콘",
+        name: "Nikon",
         imageUrl: "https://example.com/nikon.jpg",
         children: [],
-        parent: "B7"
+        parent: {
+          type: "B",
+          id: "B7",
+          name: "Cameras",
+          imageUrl: "https://example.com/cameras.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B7-3",
-        name: "소니",
+        name: "Sony",
         imageUrl: "https://example.com/sony-camera.jpg",
         children: [],
-        parent: "B7"
+        parent: {
+          type: "B",
+          id: "B7",
+          name: "Cameras",
+          imageUrl: "https://example.com/cameras.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B7-4",
-        name: "후지필름",
+        name: "Fujifilm",
         imageUrl: "https://example.com/fujifilm.jpg",
         children: [],
-        parent: "B7"
+        parent: {
+          type: "B",
+          id: "B7",
+          name: "Cameras",
+          imageUrl: "https://example.com/cameras.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B7-5",
-        name: "고프로",
+        name: "GoPro",
         imageUrl: "https://example.com/gopro.jpg",
         children: [],
-        parent: "B7"
+        parent: {
+          type: "B",
+          id: "B7",
+          name: "Cameras",
+          imageUrl: "https://example.com/cameras.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -479,7 +688,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B8",
-    name: "프린터",
+    name: "Printers",
     imageUrl: "https://example.com/printers.jpg",
     children: [
       {
@@ -488,39 +697,74 @@ export const mockGridItems: GridItem[] = [
         name: "HP",
         imageUrl: "https://example.com/hp.jpg",
         children: [],
-        parent: "B8"
+        parent: {
+          type: "B",
+          id: "B8",
+          name: "Printers",
+          imageUrl: "https://example.com/printers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B8-2",
-        name: "엡손",
+        name: "Epson",
         imageUrl: "https://example.com/epson.jpg",
         children: [],
-        parent: "B8"
+        parent: {
+          type: "B",
+          id: "B8",
+          name: "Printers",
+          imageUrl: "https://example.com/printers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B8-3",
-        name: "캐논",
+        name: "Canon",
         imageUrl: "https://example.com/canon-printer.jpg",
         children: [],
-        parent: "B8"
+        parent: {
+          type: "B",
+          id: "B8",
+          name: "Printers",
+          imageUrl: "https://example.com/printers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B8-4",
-        name: "브라더",
+        name: "Brother",
         imageUrl: "https://example.com/brother.jpg",
         children: [],
-        parent: "B8"
+        parent: {
+          type: "B",
+          id: "B8",
+          name: "Printers",
+          imageUrl: "https://example.com/printers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B8-5",
-        name: "삼성",
+        name: "Samsung",
         imageUrl: "https://example.com/samsung-printer.jpg",
         children: [],
-        parent: "B8"
+        parent: {
+          type: "B",
+          id: "B8",
+          name: "Printers",
+          imageUrl: "https://example.com/printers.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -528,7 +772,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B9",
-    name: "모니터",
+    name: "Monitors",
     imageUrl: "https://example.com/monitors.jpg",
     children: [
       {
@@ -537,39 +781,74 @@ export const mockGridItems: GridItem[] = [
         name: "LG",
         imageUrl: "https://example.com/lg-monitor.jpg",
         children: [],
-        parent: "B9"
+        parent: {
+          type: "B",
+          id: "B9",
+          name: "Monitors",
+          imageUrl: "https://example.com/monitors.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B9-2",
-        name: "삼성",
+        name: "Samsung",
         imageUrl: "https://example.com/samsung-monitor.jpg",
         children: [],
-        parent: "B9"
+        parent: {
+          type: "B",
+          id: "B9",
+          name: "Monitors",
+          imageUrl: "https://example.com/monitors.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B9-3",
-        name: "델",
+        name: "Dell",
         imageUrl: "https://example.com/dell-monitor.jpg",
         children: [],
-        parent: "B9"
+        parent: {
+          type: "B",
+          id: "B9",
+          name: "Monitors",
+          imageUrl: "https://example.com/monitors.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B9-4",
-        name: "벤큐",
+        name: "BenQ",
         imageUrl: "https://example.com/benq.jpg",
         children: [],
-        parent: "B9"
+        parent: {
+          type: "B",
+          id: "B9",
+          name: "Monitors",
+          imageUrl: "https://example.com/monitors.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B9-5",
-        name: "에이서",
+        name: "Acer",
         imageUrl: "https://example.com/acer.jpg",
         children: [],
-        parent: "B9"
+        parent: {
+          type: "B",
+          id: "B9",
+          name: "Monitors",
+          imageUrl: "https://example.com/monitors.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -577,48 +856,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B10",
-    name: "키보드",
+    name: "Keyboards",
     imageUrl: "https://example.com/keyboards.jpg",
     children: [
       {
         type: "B",
         id: "B10-1",
-        name: "로지텍",
+        name: "Logitech",
         imageUrl: "https://example.com/logitech-keyboard.jpg",
         children: [],
-        parent: "B10"
+        parent: {
+          type: "B",
+          id: "B10",
+          name: "Keyboards",
+          imageUrl: "https://example.com/keyboards.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B10-2",
-        name: "레오폴드",
+        name: "Leopold",
         imageUrl: "https://example.com/leopold.jpg",
         children: [],
-        parent: "B10"
+        parent: {
+          type: "B",
+          id: "B10",
+          name: "Keyboards",
+          imageUrl: "https://example.com/keyboards.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B10-3",
-        name: "앱코",
+        name: "ABKO",
         imageUrl: "https://example.com/abko.jpg",
         children: [],
-        parent: "B10"
+        parent: {
+          type: "B",
+          id: "B10",
+          name: "Keyboards",
+          imageUrl: "https://example.com/keyboards.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B10-4",
-        name: "키크론",
+        name: "Keychron",
         imageUrl: "https://example.com/keychron.jpg",
         children: [],
-        parent: "B10"
+        parent: {
+          type: "B",
+          id: "B10",
+          name: "Keyboards",
+          imageUrl: "https://example.com/keyboards.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B10-5",
-        name: "덕키",
+        name: "Ducky",
         imageUrl: "https://example.com/ducky.jpg",
         children: [],
-        parent: "B10"
+        parent: {
+          type: "B",
+          id: "B10",
+          name: "Keyboards",
+          imageUrl: "https://example.com/keyboards.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -626,48 +940,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B11",
-    name: "마우스",
+    name: "Mice",
     imageUrl: "https://example.com/mice.jpg",
     children: [
       {
         type: "B",
         id: "B11-1",
-        name: "로지텍",
+        name: "Logitech",
         imageUrl: "https://example.com/logitech-mouse.jpg",
         children: [],
-        parent: "B11"
+        parent: {
+          type: "B",
+          id: "B11",
+          name: "Mice",
+          imageUrl: "https://example.com/mice.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B11-2",
-        name: "레이저",
+        name: "Razer",
         imageUrl: "https://example.com/razer.jpg",
         children: [],
-        parent: "B11"
+        parent: {
+          type: "B",
+          id: "B11",
+          name: "Mice",
+          imageUrl: "https://example.com/mice.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B11-3",
-        name: "매직마우스",
+        name: "Magic Mouse",
         imageUrl: "https://example.com/magic-mouse.jpg",
         children: [],
-        parent: "B11"
+        parent: {
+          type: "B",
+          id: "B11",
+          name: "Mice",
+          imageUrl: "https://example.com/mice.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B11-4",
-        name: "제닉스",
+        name: "Xenics",
         imageUrl: "https://example.com/xenics.jpg",
         children: [],
-        parent: "B11"
+        parent: {
+          type: "B",
+          id: "B11",
+          name: "Mice",
+          imageUrl: "https://example.com/mice.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B11-5",
-        name: "마이크로소프트",
+        name: "Microsoft",
         imageUrl: "https://example.com/microsoft-mouse.jpg",
         children: [],
-        parent: "B11"
+        parent: {
+          type: "B",
+          id: "B11",
+          name: "Mice",
+          imageUrl: "https://example.com/mice.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -675,7 +1024,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B12",
-    name: "공유기",
+    name: "Routers",
     imageUrl: "https://example.com/routers.jpg",
     children: [
       {
@@ -684,39 +1033,74 @@ export const mockGridItems: GridItem[] = [
         name: "ipTIME",
         imageUrl: "https://example.com/iptime.jpg",
         children: [],
-        parent: "B12"
+        parent: {
+          type: "B",
+          id: "B12",
+          name: "Routers",
+          imageUrl: "https://example.com/routers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B12-2",
-        name: "넷기어",
+        name: "Netgear",
         imageUrl: "https://example.com/netgear.jpg",
         children: [],
-        parent: "B12"
+        parent: {
+          type: "B",
+          id: "B12",
+          name: "Routers",
+          imageUrl: "https://example.com/routers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B12-3",
-        name: "티피링크",
+        name: "TP-Link",
         imageUrl: "https://example.com/tp-link.jpg",
         children: [],
-        parent: "B12"
+        parent: {
+          type: "B",
+          id: "B12",
+          name: "Routers",
+          imageUrl: "https://example.com/routers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B12-4",
-        name: "링크시스",
+        name: "Linksys",
         imageUrl: "https://example.com/linksys.jpg",
         children: [],
-        parent: "B12"
+        parent: {
+          type: "B",
+          id: "B12",
+          name: "Routers",
+          imageUrl: "https://example.com/routers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B12-5",
-        name: "아수스",
+        name: "ASUS",
         imageUrl: "https://example.com/asus-router.jpg",
         children: [],
-        parent: "B12"
+        parent: {
+          type: "B",
+          id: "B12",
+          name: "Routers",
+          imageUrl: "https://example.com/routers.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -724,16 +1108,23 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B13",
-    name: "외장하드",
+    name: "External Storage",
     imageUrl: "https://example.com/external-drives.jpg",
     children: [
       {
         type: "B",
         id: "B13-1",
-        name: "삼성",
+        name: "Samsung",
         imageUrl: "https://example.com/samsung-ssd.jpg",
         children: [],
-        parent: "B13"
+        parent: {
+          type: "B",
+          id: "B13",
+          name: "External Storage",
+          imageUrl: "https://example.com/external-drives.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
@@ -741,31 +1132,59 @@ export const mockGridItems: GridItem[] = [
         name: "WD",
         imageUrl: "https://example.com/wd.jpg",
         children: [],
-        parent: "B13"
+        parent: {
+          type: "B",
+          id: "B13",
+          name: "External Storage",
+          imageUrl: "https://example.com/external-drives.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B13-3",
-        name: "씨게이트",
+        name: "Seagate",
         imageUrl: "https://example.com/seagate.jpg",
         children: [],
-        parent: "B13"
+        parent: {
+          type: "B",
+          id: "B13",
+          name: "External Storage",
+          imageUrl: "https://example.com/external-drives.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B13-4",
-        name: "샌디스크",
+        name: "SanDisk",
         imageUrl: "https://example.com/sandisk.jpg",
         children: [],
-        parent: "B13"
+        parent: {
+          type: "B",
+          id: "B13",
+          name: "External Storage",
+          imageUrl: "https://example.com/external-drives.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B13-5",
-        name: "도시바",
+        name: "Toshiba",
         imageUrl: "https://example.com/toshiba.jpg",
         children: [],
-        parent: "B13"
+        parent: {
+          type: "B",
+          id: "B13",
+          name: "External Storage",
+          imageUrl: "https://example.com/external-drives.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -773,48 +1192,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B14",
-    name: "충전기",
+    name: "Chargers",
     imageUrl: "https://example.com/chargers.jpg",
     children: [
       {
         type: "B",
         id: "B14-1",
-        name: "애플",
+        name: "Apple",
         imageUrl: "https://example.com/apple-charger.jpg",
         children: [],
-        parent: "B14"
+        parent: {
+          type: "B",
+          id: "B14",
+          name: "Chargers",
+          imageUrl: "https://example.com/chargers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B14-2",
-        name: "삼성",
+        name: "Samsung",
         imageUrl: "https://example.com/samsung-charger.jpg",
         children: [],
-        parent: "B14"
+        parent: {
+          type: "B",
+          id: "B14",
+          name: "Chargers",
+          imageUrl: "https://example.com/chargers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B14-3",
-        name: "앤커",
+        name: "Anker",
         imageUrl: "https://example.com/anker.jpg",
         children: [],
-        parent: "B14"
+        parent: {
+          type: "B",
+          id: "B14",
+          name: "Chargers",
+          imageUrl: "https://example.com/chargers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B14-4",
-        name: "벨킨",
+        name: "Belkin",
         imageUrl: "https://example.com/belkin.jpg",
         children: [],
-        parent: "B14"
+        parent: {
+          type: "B",
+          id: "B14",
+          name: "Chargers",
+          imageUrl: "https://example.com/chargers.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B14-5",
-        name: "베이스어스",
+        name: "Baseus",
         imageUrl: "https://example.com/baseus.jpg",
         children: [],
-        parent: "B14"
+        parent: {
+          type: "B",
+          id: "B14",
+          name: "Chargers",
+          imageUrl: "https://example.com/chargers.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -822,48 +1276,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B15",
-    name: "스마트홈기기",
+    name: "Smart Home Devices",
     imageUrl: "https://example.com/smart-home.jpg",
     children: [
       {
         type: "B",
         id: "B15-1",
-        name: "구글홈",
+        name: "Google Home",
         imageUrl: "https://example.com/google-home.jpg",
         children: [],
-        parent: "B15"
+        parent: {
+          type: "B",
+          id: "B15",
+          name: "Smart Home Devices",
+          imageUrl: "https://example.com/smart-home.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B15-2",
-        name: "알렉사",
+        name: "Alexa",
         imageUrl: "https://example.com/alexa.jpg",
         children: [],
-        parent: "B15"
+        parent: {
+          type: "B",
+          id: "B15",
+          name: "Smart Home Devices",
+          imageUrl: "https://example.com/smart-home.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B15-3",
-        name: "필립스휴",
+        name: "Philips Hue",
         imageUrl: "https://example.com/philips-hue.jpg",
         children: [],
-        parent: "B15"
+        parent: {
+          type: "B",
+          id: "B15",
+          name: "Smart Home Devices",
+          imageUrl: "https://example.com/smart-home.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B15-4",
-        name: "링",
+        name: "Ring",
         imageUrl: "https://example.com/ring.jpg",
         children: [],
-        parent: "B15"
+        parent: {
+          type: "B",
+          id: "B15",
+          name: "Smart Home Devices",
+          imageUrl: "https://example.com/smart-home.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B15-5",
-        name: "네스트",
+        name: "Nest",
         imageUrl: "https://example.com/nest.jpg",
         children: [],
-        parent: "B15"
+        parent: {
+          type: "B",
+          id: "B15",
+          name: "Smart Home Devices",
+          imageUrl: "https://example.com/smart-home.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -871,48 +1360,83 @@ export const mockGridItems: GridItem[] = [
   {
     type: "B",
     id: "B16",
-    name: "게이밍기어",
+    name: "Gaming Gear",
     imageUrl: "https://example.com/gaming.jpg",
     children: [
       {
         type: "B",
         id: "B16-1",
-        name: "레이저",
+        name: "Razer",
         imageUrl: "https://example.com/razer-gaming.jpg",
         children: [],
-        parent: "B16"
+        parent: {
+          type: "B",
+          id: "B16",
+          name: "Gaming Gear",
+          imageUrl: "https://example.com/gaming.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B16-2",
-        name: "로지텍G",
+        name: "Logitech G",
         imageUrl: "https://example.com/logitech-g.jpg",
         children: [],
-        parent: "B16"
+        parent: {
+          type: "B",
+          id: "B16",
+          name: "Gaming Gear",
+          imageUrl: "https://example.com/gaming.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B16-3",
-        name: "스틸시리즈",
+        name: "SteelSeries",
         imageUrl: "https://example.com/steelseries.jpg",
         children: [],
-        parent: "B16"
+        parent: {
+          type: "B",
+          id: "B16",
+          name: "Gaming Gear",
+          imageUrl: "https://example.com/gaming.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B16-4",
-        name: "콕스",
+        name: "Cox",
         imageUrl: "https://example.com/cox.jpg",
         children: [],
-        parent: "B16"
+        parent: {
+          type: "B",
+          id: "B16",
+          name: "Gaming Gear",
+          imageUrl: "https://example.com/gaming.jpg",
+          parent: undefined,
+          children: []
+        }
       },
       {
         type: "B",
         id: "B16-5",
-        name: "corsair",
+        name: "Corsair",
         imageUrl: "https://example.com/corsair.jpg",
         children: [],
-        parent: "B16"
+        parent: {
+          type: "B",
+          id: "B16",
+          name: "Gaming Gear",
+          imageUrl: "https://example.com/gaming.jpg",
+          parent: undefined,
+          children: []
+        }
       }
     ],
     parent: undefined
@@ -922,7 +1446,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C1",
-    name: "과일",
+    name: "Fruits",
     imageUrl: "https://example.com/fruits.jpg",
     children: [],
     parent: undefined
@@ -930,7 +1454,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C2",
-    name: "채소",
+    name: "Vegetables",
     imageUrl: "https://example.com/vegetables.jpg",
     children: [],
     parent: undefined
@@ -938,7 +1462,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C3",
-    name: "육류",
+    name: "Meat",
     imageUrl: "https://example.com/meat.jpg",
     children: [],
     parent: undefined
@@ -946,7 +1470,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C4",
-    name: "수산물",
+    name: "Seafood",
     imageUrl: "https://example.com/seafood.jpg",
     children: [],
     parent: undefined
@@ -954,7 +1478,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C5",
-    name: "유제품",
+    name: "Dairy Products",
     imageUrl: "https://example.com/dairy.jpg",
     children: [],
     parent: undefined
@@ -962,7 +1486,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C6",
-    name: "간식",
+    name: "Snacks",
     imageUrl: "https://example.com/snacks.jpg",
     children: [],
     parent: undefined
@@ -970,7 +1494,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C7",
-    name: "음료",
+    name: "Beverages",
     imageUrl: "https://example.com/beverages.jpg",
     children: [],
     parent: undefined
@@ -978,7 +1502,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C8",
-    name: "즉석식품",
+    name: "Instant Food",
     imageUrl: "https://example.com/instant-food.jpg",
     children: [],
     parent: undefined
@@ -986,7 +1510,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C9",
-    name: "조미료",
+    name: "Seasonings",
     imageUrl: "https://example.com/seasonings.jpg",
     children: [],
     parent: undefined
@@ -994,7 +1518,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C10",
-    name: "곡물",
+    name: "Grains",
     imageUrl: "https://example.com/grains.jpg",
     children: [],
     parent: undefined
@@ -1002,7 +1526,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C11",
-    name: "빵/제과",
+    name: "Bakery",
     imageUrl: "https://example.com/bakery.jpg",
     children: [],
     parent: undefined
@@ -1010,7 +1534,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C12",
-    name: "냉동식품",
+    name: "Frozen Food",
     imageUrl: "https://example.com/frozen-food.jpg",
     children: [],
     parent: undefined
@@ -1018,7 +1542,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C13",
-    name: "반찬",
+    name: "Side Dishes",
     imageUrl: "https://example.com/side-dishes.jpg",
     children: [],
     parent: undefined
@@ -1026,7 +1550,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C14",
-    name: "김치",
+    name: "Kimchi",
     imageUrl: "https://example.com/kimchi.jpg",
     children: [],
     parent: undefined
@@ -1034,7 +1558,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C15",
-    name: "견과류",
+    name: "Nuts",
     imageUrl: "https://example.com/nuts.jpg",
     children: [],
     parent: undefined
@@ -1042,7 +1566,7 @@ export const mockGridItems: GridItem[] = [
   {
     type: "C",
     id: "C16",
-    name: "건강식품",
+    name: "Health Food",
     imageUrl: "https://example.com/health-food.jpg",
     children: [],
     parent: undefined

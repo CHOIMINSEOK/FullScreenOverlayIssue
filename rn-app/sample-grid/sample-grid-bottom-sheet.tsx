@@ -6,6 +6,7 @@ import { SegmentedControl } from "./segmented-control";
 import { HorizontalViewPager } from "./horizontal-view-pager";
 import { mockGridItems } from "./mock-data";
 import { SampleGrid } from "./sample-grid";
+import { BottomSheetDefaultBackdropProps } from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheetBackdrop/types";
 
 
 const GridItemTabTypes = [
@@ -53,7 +54,7 @@ export const SampleGridBottomSheet: FC<PropsWithChildren<{initialType: GridItemT
     };
 
     return (
-        <BottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} >
+        <BottomSheetModal ref={bottomSheetModalRef} onDismiss={onDismiss} backdropComponent={Backdrop}>
           <BottomSheetView style={{ height: 600, width: '100%'}}>
               <SegmentedControl
               ref={segmentedControlRef}
@@ -88,3 +89,13 @@ export const SampleGridBottomSheet: FC<PropsWithChildren<{initialType: GridItemT
         </BottomSheetModal>
     );
   }
+
+
+  const Backdrop = (backDropProps: BottomSheetDefaultBackdropProps) => (
+    <BottomSheetBackdrop
+      {...backDropProps}
+      pressBehavior="close"
+      appearsOnIndex={0}
+      disappearsOnIndex={-1}
+    />
+  );
