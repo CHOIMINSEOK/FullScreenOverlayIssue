@@ -22,35 +22,6 @@ export const SampleGrid = ({
   const [selectedChildCategory, setSelectedChildCategory] = useState<GridItem | null>(null);
   const [selectedCategoryRowPosition, setSelectedCategoryRowPosition] = useState<number | null>(null);
 
-  /**
-   * 마운트 시 선택된 카테고리가 어느 위치에 있는지 찾기 위한 useEffect이고 선택된_카테고리가 변경되었을 때에만 동작하길 기대합니다.
-   */
-  useEffect(() => {
-    const hasParentCategory = selectedCategory?.parent !== undefined;
-
-    if (hasParentCategory) {
-      setSelectedParentCategory(selectedCategory.parent!!);
-      setSelectedChildCategory(selectedCategory);
-      setSelectedCategoryRowPosition(
-        findCategoryRowInGrid(
-          selectedCategory.parent!!,
-          gridParentCategories
-        )
-      );
-    } else {
-      setSelectedParentCategory(selectedCategory);
-
-      if (selectedCategory) {
-        setSelectedCategoryRowPosition(
-          findCategoryRowInGrid(
-            selectedCategory,
-            gridParentCategories
-          )
-        );
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCategory]);
 
   const onClickParentCategory = useCallback(
     (category: GridItem, rowPosition: number) => {

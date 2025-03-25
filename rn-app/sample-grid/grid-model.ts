@@ -13,7 +13,7 @@ export function getParentCategoryEntities(gridItems: GridItem[]) {
     return gridItems.filter(item => item.parent === undefined);
   }
   
-export function getChildCategoryEntities(gridItems: GridItem[], parentId: string) {
-    return gridItems.filter(item => parentId === item.parent?.id);
+export function getChildCategoryEntities(gridItems: GridItem[], parentId: string): GridItem[] {
+    return gridItems.filter(item => parentId === item.id).map(item => item.children).flat();
 }
   
