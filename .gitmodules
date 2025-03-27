@@ -1,0 +1,3 @@
+[submodule "rn-app"]
+	path = rn-app
+	url = https://github.com/CHOIMINSEOK/BrownFieldRNApp.git
